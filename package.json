@@ -1,0 +1,47 @@
+{
+  "name": "start-here",
+  "version": "1.0.0",
+  "description": "does alot of nothing",
+  "browserify": {
+    "transform": [
+    ]
+  },
+  "scripts": {
+    "precommit": "npm run lint",
+    "prepush": "npm run lint",
+    "test": "EXIT_STATUS=0; npm -s run lint || EXIT_STATUS=$?; npm -s run tape|| EXIT_STATUS=$?; exit $EXIT_STATUS",
+    "test:watch": "nodemon --ignore node_modules/ -e js,json --exec 'npm test'",
+    "tape": "browserify test/*.js | tap-closer | smokestack | tap-spec",
+    "lint": "eslint src/ bin/ test/",
+    "build:js": "browserify src/index.js | uglifyjs -mc > dist/bundle.js",
+    "build:stylus": "stylus ./stylus/main.styl -o ./dist/main.css --compress",
+    "build": "npm run clean && npm run build:js && npm run build:stylus && cp -r public/ dist",
+    "watch:js": "watchify src/index.js -o dist/bundle.js -dv",
+    "watch:stylus": "stylus -w ./stylus/main.styl -o ./dist/main.css",
+    "watch:public": "./bin/uatu.js",
+    "watch": "npm run clean && (npm run watch:js & npm run watch:stylus & npm run watch:public)",
+    "clean": "rm -rf dist/*",
+    "dev": "npm run watch & ecstatic dist/",
+    "start": "npm run build && cat dist/bundle.js | gzip > dist/bundle.js.gz && ecstatic dist/ --gzip=true"
+  },
+  "author": "Myles Borins <myles.borins@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chalk": "^1.1.0",
+    "chokidar": "^1.0.5",
+    "ecstatic": "^0.8.0",
+    "eslint": "^1.1.0",
+    "husky": "^0.9.2",
+    "mkdirp": "^0.5.1",
+    "smokestack": "^3.3.0",
+    "tap-closer": "^1.0.0",
+    "tap-spec": "^4.0.2",
+    "tape": "^4.1.0",
+    "watchify": "^3.3.1"
+  },
+  "dependencies": {
+    "browserify": "^11.0.1",
+    "stylus": "^0.52.0",
+    "uglify-js": "^2.4.24"
+  }
+}
