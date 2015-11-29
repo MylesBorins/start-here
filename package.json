@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "does alot of nothing",
   "browserify": {
-    "transform": [
-    ]
+    "transform": [["babelify", { "presets": ["es2015"] }]]
   },
   "scripts": {
     "precommit": "npm run lint",
@@ -20,7 +19,7 @@
     "watch:stylus": "stylus -w ./stylus/main.styl -o ./dist/main.css",
     "watch:public": "./bin/uatu.js",
     "watch": "npm run clean && (npm run watch:js & npm run watch:stylus & npm run watch:public)",
-    "clean": "rm -rf dist/*",
+    "clean": "rm -rf dist/ && mkdir -p dist/",
     "dev": "npm run watch & ecstatic dist/",
     "start": "npm run build && cat dist/bundle.js | gzip > dist/bundle.js.gz && ecstatic dist/ --gzip=true"
   },
@@ -40,6 +39,8 @@
     "watchify": "^3.3.1"
   },
   "dependencies": {
+    "babel-preset-es2015": "^6.1.18",
+    "babelify": "^7.2.0",
     "browserify": "^11.0.1",
     "stylus": "^0.52.0",
     "uglify-js": "^2.4.24"
