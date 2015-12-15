@@ -1,0 +1,5 @@
+---
+applications:
+- name: your-name-here
+  command: npm start
+  path: .
