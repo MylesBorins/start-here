@@ -15,32 +15,24 @@
     ]
   },
   "scripts": {
-    "precommit": "npm run lint",
-    "prepush": "npm run lint",
     "test": "EXIT_STATUS=0; npm -s run lint || EXIT_STATUS=$?; npm -s run tape|| EXIT_STATUS=$?; exit $EXIT_STATUS",
     "test:watch": "nodemon --ignore node_modules/ -e js,json --exec 'npm test'",
     "tape": "browserify test/*.js | tap-closer | smokestack | tap-spec",
     "lint": "eslint src/ bin/ test/",
     "build:js": "browserify src/index.js | uglifyjs -mc > dist/bundle.js",
-    "build:stylus": "stylus ./stylus/main.styl -o ./dist/main.css --compress",
-    "build": "npm run clean && npm run build:js && npm run build:stylus && cp -r public/ dist",
+    "build:stylus": "stylus --include-css ./stylus/main.styl -o ./dist/main.css --compress",
+    "build": "npm run clean && npm run build:js && npm run build:stylus",
     "watch:js": "watchify src/index.js -o dist/bundle.js -dv",
-    "watch:stylus": "stylus -w ./stylus/main.styl -o ./dist/main.css",
-    "watch:public": "./bin/uatu.js",
-    "watch": "npm run clean && (npm run watch:js & npm run watch:stylus & npm run watch:public)",
+    "watch:stylus": "stylus --include-css -w ./stylus/main.styl -o ./dist/main.css",
+    "watch": "npm run clean && (npm run watch:js & npm run watch:stylus)",
     "clean": "rm -rf dist/ && mkdir -p dist/",
-    "dev": "npm run watch & ecstatic dist/",
-    "start": "npm run build && cat dist/bundle.js | gzip > dist/bundle.js.gz && ecstatic dist/ --gzip=true"
+    "dev": "npm run clean && npm run watch & node server/",
+    "start": "npm run build && node server/"
   },
   "author": "Myles Borins <myles.borins@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "chalk": "^1.1.0",
-    "chokidar": "^1.0.5",
-    "ecstatic": "^1.3.1",
     "eslint": "^1.1.0",
-    "husky": "^0.10.2",
-    "mkdirp": "^0.5.1",
     "smokestack": "^3.3.0",
     "tap-closer": "^1.0.0",
     "tap-spec": "^4.0.2",
@@ -50,7 +42,10 @@
   "dependencies": {
     "babel-preset-es2015": "^6.1.18",
     "babelify": "^7.2.0",
-    "browserify": "^12.0.1",
+    "browserify": "^11.0.1",
+    "compression": "^1.6.0",
+    "express": "^4.13.3",
+    "lodash": "^3.10.1",
     "stylus": "^0.52.0",
     "uglify-js": "^2.4.24"
   }
