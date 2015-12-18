@@ -5,19 +5,18 @@
 
 ```bash
 $ npm run dev
-ecstatic serving dist/ at http://0.0.0.0:8000
+express serving dist/ and public/ at http://0.0.0.0:3000
 ```
 
 * Start Watchify (browserify on changes to js)
-* Start Uatu (copy assets from public to dist on change)
-* Start Ecstatic (static file server)
-  * Server is running on port 8000
+* Start Express (static file server)
+  * Server is running on port 3000 || process.env.PORT
 
 ##Prod
 
 ```
 $ npm start
-ecstatic serving dist/ at http://0.0.0.0:8000
+express serving dist/ and public/ at http://0.0.0.0:3000
 
 ```
 
@@ -25,8 +24,8 @@ ecstatic serving dist/ at http://0.0.0.0:8000
 * uglify and gzip js
   * only ???k!
 * minified css
-* starts Ecstatic (with gzip support enabled)
-  * Server is running on port 8000
+* starts express
+  * Server is running on port 3000 || process.env.PORT
 
 
 ##Testing
