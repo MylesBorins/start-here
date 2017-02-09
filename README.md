@@ -5,6 +5,10 @@
 
 This repo is going to act as a central place for me to collect all sorts of fun this I want to share on the internet. This will included examples, slide decks, starter projects, and more!
 
+## What isn't this?
+
+This is not an official google product!
+
 ## License
 
 Apache 2.0 ~ check LICENSE
