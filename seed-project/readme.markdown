@@ -1,7 +1,7 @@
-#start here
-###Made with node and <3
+# Seed Project
+### Made with node and <3
 
-##Dev
+## Dev
 
 ```bash
 $ npm run dev
@@ -12,7 +12,7 @@ express serving dist/ and public/ at http://0.0.0.0:3000
 * Start Express (static file server)
   * Server is running on port 3000 || process.env.PORT
 
-##Prod
+## Prod
 
 ```
 $ npm start
@@ -28,7 +28,7 @@ express serving dist/ and public/ at http://0.0.0.0:3000
   * Server is running on port 3000 || process.env.PORT
 
 
-##Testing
+## Testing
 
 ```
 $ npm test
@@ -39,18 +39,14 @@ This project has a series of unit(ish) tests. Currently API calls are not stubbe
 
 The tests are all written in tape. The blog post [Testing JavaScript Modules with Tape][use-tape] does a great job of explaining why tape is awesome!
 
-##Git Hooks
-
-This project uses the node module husky to wire some git hooks with npm scripts. In order to commit the code must lint, in order to push the code must lint. This will catch all sorts of silly errors early :D.
-
-####Notes 
+#### Notes 
 
 [smokestack]: https://www.npmjs.com/package/smokestack "smokestack on npmjs.com"
 [use-tape]: http://ponyfoo.com/articles/testing-javascript-modules-with-tape "Testing JavaScript Modules with Tape"
 
-##License
+## License
 
-MIT ~ check LICENSE
+Apache 2.0 ~ check LICENSE
 
-##Code of Conduct
+## Code of Conduct
 Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
