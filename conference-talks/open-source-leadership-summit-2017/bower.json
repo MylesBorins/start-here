@@ -1,0 +1,7 @@
+{
+  "name": "presentation-from-bdfl-to-consensus-seeking",
+  "version": "1.0.0",
+  "dependencies": {
+    "prism": "gh-pages"
+  }
+}
