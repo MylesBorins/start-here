@@ -11,6 +11,82 @@ html
     .hello {
       background-image: url('images/hello-tharr.gif')
     }
+    .osi {
+      background-image: url('images/osi.png')
+    }
+    .flux {
+      background-image: url('images/flux.gif')
+    }
+    .linus {
+      background-image: url('images/linus.jpg')
+    }
+    .larry {
+      background-image: url('images/larry-wall.jpg')
+    }
+    .matz {
+      background-image: url('images/matz.jpg')
+    }
+    .board {
+      background-image: url('images/node-board.jpeg')
+    }
+    .node {
+      background-image: url('images/node.jpg')
+    }
+    .mickey {
+      background-image: url('images/mickey.gif')
+    }
+    .steer {
+      background-image: url('images/steer.gif')
+    }
+    .wg {
+      background-image: url('images/wg.gif')
+    }
+    .dahl {
+      background-image: url('images/dahl.jpg')
+    }
+    .jsconf {
+      background-image: url('images/dahl-jsconf.png')
+    }
+    .guido {
+      background-image: url('images/vanrossum.jpg')
+    }
+    .ag_dubs {
+      background-image: url('images/ag_dubs.jpg')
+    }
+    .dahl2 {
+      background-image: url('images/ryan_dahl.jpg')
+    }
+    .isz {
+      background-image: url('images/npm.jpg')
+    }
+    .tj {
+      background-image: url('images/tj.jpg')
+    }
+    .io {
+      background-image: url('images/io.jpg')
+    }
+    .time {
+      background-image: url('images/time.gif')
+    }
+    .ci {
+      background-image: url('images/ci.jpg')
+    }
+    
+    .smoke {
+      background-image: url('images/smoke.jpg')
+    }
+    .me-dogs {
+      background-image: url('images/me-dogs.jpg')
+    }
+    .rich {
+      background-image: url('images/rich.jpg')
+    }
+    .will {
+      background-image: url('images/will.jpg')
+    }
+    .gzip {
+      background-image: url('images/gzip.png')
+    }
 
   body
 
@@ -33,11 +109,220 @@ html
       
       section
         h3 I am gainfully employed by Google as a Developer Advocate
-        h4 Focusing on the Node.js ecosystem on GCP
+        h4 Focusing on the Node.js ecosystem running on GCP
         
         img(src='images/gcp.png' alt='Google Clud Platform' style='background-color:white;')
         
         h5.headroom The opinions expressed in this talk are solely my own
+
+      section(data-bespoke-backdrop='osi')
+        h1 What even is open source governance
+
+      section
+        h1 How is Node Governed?
+      
+      section(data-bespoke-backdrop='board')
+        h1 Board of Directors
+        h2.headroom 13 members
+
+      section(data-bespoke-backdrop='mickey')
+        h1 TSC
+        h2.headroom 11 members
+      
+      section(data-bespoke-backdrop='steer')
+        h1 CTC
+        h2.headroom 19 members
+      
+      section
+        h1 Collaborators
+        h2.headroom 74 members
+      
+      section(data-bespoke-backdrop='wg')
+        h1 Working Groups
+        h2.headroom sooooo many (this is a good thing)
+      
+      section
+        h1 Trust in individuals can be replaced
+        h2 With trust process and tooling
+      
+      section
+        h1 Consensus Seeking
+        h2 Our Technical Governance Model
+      
+      section
+        h1 But how did we get here?
+      
+      section(data-bespoke-backdrop='flux')
+        h1 We have to go back!
+      
+      section(data-bespoke-backdrop='node')
+        h1 Node.js was created in 2009
+      
+      section(data-bespoke-backdrop='dahl')
+        h1 It was created by Ryan Dahl
+      
+      section(data-bespoke-backdrop='jsconf')
+        h1 First presented at JSConf.eu 2009
+      
+      section
+        h1 It was run using a BDFL model
+      
+      section
+        h1 What is BDFL?
+        h2.headroom Benevolant Dictator for Life
+      
+      section(data-bespoke-backdrop='guido')
+        h2 originally coined
+        h3 as a title for
+        h2 Guido van van Rossum
+        h3 in a 1995 email thread
+        
+      section
+        h2 TLDR;
+        h3 A governance model where a single individual
+        h4 Retains the final say in decision making
+      
+      section
+        h1 Examples
+      
+      seciton(data-bespoke-backdrop='linus')
+        h1 Linus Torvalds
+        h2.headroom Linux
+      
+      section(data-bespoke-backdrop='larry')
+        h1 Larry Wall
+        h2.headroom Perl
+      
+      section(data-bespoke-backdrop='matz')
+        h1 Yukihiro Matsumoto (Matz)
+        h2.headroom Ruby
+
+      section
+        h1 BDFL can be successful
+        h2.headroom if truly benevolent
+
+      section(data-bespoke-backdrop='ag_dubs')
+        h2 "BDFLs works if they see themselves as facilitators not controllers"
+        h3.headroom - @ag_dubs
+
+      section
+        h1 Node had 3 different BDFLs
+      
+      section(data-bespoke-backdrop='dahl2')
+        h1 Ryan Dahl
+        h2.headroom From initial release until v0.6
+      
+      section(data-bespoke-backdrop='isz')
+        h1 Isaac Schlueter
+        h2.headroom Starts doing releases at v0.6.5
+          
+      section(data-bespoke-backdrop='tj')
+        h1 TJ Fontaine
+        h2.headroom Starts doing releases at v0.10.13
+      
+      section
+        h1 Under corporate sponsorship
+        h2.headroom Node stagnated
+      
+      section
+        h2 Node started with alternating releases
+        h3 Even was stable
+        h3 Odd was unstable
+
+      section(data-bespoke-backdrop='time')
+        h2 It was taking a long time
+        h2 for v0.12.0
+        h3 Let alone v1.0.0 
+
+      section(data-bespoke-backdrop='io')
+        h3 The project was forked in Dec of 2014
+        h3 Released as v1.0.0
+
+      section
+        h1 v0.12.0 Released
+        h2.headroom Feb 2015
+        h3 Just before Node Summit
+
+      section
+        h1 v1 - v3 were all part of the iojs project
+
+      section
+        h2 Node was put into a foundation 
+        h3 The projects merged as v4.0.0
+        h3 September of 2015
+      
+      section
+        h1 Consensus Seeking
+        h2.headroom How does it work?
+      
+      section
+        h1 Every commit
+        ul.headroom
+          li.hide
+          li Must come as a PR on github
+          li Must bake for 48 hours during the week
+          li Must bake for 72 hours during the weekend
+          li Must be approved by at least 1 collaborator
+          li Must have no disagreement (if non breaking)
+        
+      section
+        h1 Semver Major Changes
+        ul.headroom
+          li.hide
+          li Must be reviewed by the CTC
+          li This does not need to be during a meeting
+          li Preference is to reach consensus in PR
+
+      section
+        h1 We have a well defined release process
+        h2.headroom Including a Long Term Support schedule
+      
+      section
+        img(src='images/schedule.png' alt='Node.js LTS schedule')
+
+      section
+        h2 Trust in individuals
+        h3 can be replaced
+        h2 With trust process and tooling
+
+      section(data-bespoke-backdrop='ci')
+        h1 CI
+      
+      section(data-bespoke-backdrop='smoke')
+        h1 Smoke Testing
+
+      section
+        h2 By putting our community first
+        h3 We allow ourselves to update the process
+        h2 Finding some amazing people
+      
+      section(data-bespoke-backdrop='rich')
+        h1 Rich Trott
+      
+      section(data-bespoke-backdrop='gzip')
+        h1 @addaleax
+      
+      section(data-bespoke-backdrop='will')
+        h1 William Kapke
+      
+      section(data-bespoke-backdrop='me-dogs')
+        h1 ME
+
+      section
+        h1 So which Governance model should I use?
+      
+      section
+        h1 Use whatever you want!
+      
+      section
+        h1 BDFL can look like lazy consensus
+      
+      section
+        h1 But it does introduce Risk
+      
+      section
+        h1 What is important
+        h2.headroom Is that you empower your community
 
       section
         h2 Thank You
