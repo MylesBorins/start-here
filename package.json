@@ -1,6 +1,6 @@
 {
   "name": "start-here",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "does alot of nothing",
   "scripts": {
     "test": "EXIT_STATUS=0; npm -s run lint || EXIT_STATUS=$?; npm -s run tape || EXIT_STATUS=$?; exit $EXIT_STATUS",
