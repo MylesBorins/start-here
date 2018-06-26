@@ -21,18 +21,18 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/MylesBorins/start-here",
   "devDependencies": {
-    "eslint": "^4.16.0",
+    "eslint": "^5.0.1",
     "smokestack": "^3.3.0",
     "tap-closer": "^1.0.0",
-    "tap-spec": "^4.0.2",
+    "tap-spec": "^5.0.0",
     "tape": "^4.1.0",
-    "watchify": "^3.3.1"
+    "watchify": "^3.11.0"
   },
   "dependencies": {
-    "browserify": "^15.2.0",
+    "browserify": "^16.2.2",
     "compression": "^1.6.0",
     "express": "^4.13.3",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.10",
     "stylus": "^0.54.5",
     "uglify-es": "^3.0.15"
   }
