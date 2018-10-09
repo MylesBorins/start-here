@@ -6,7 +6,7 @@
     "test": "EXIT_STATUS=0; npm -s run lint || EXIT_STATUS=$?; npm -s run tape || EXIT_STATUS=$?; exit $EXIT_STATUS",
     "test:watch": "nodemon --ignore node_modules/ -e js,json --exec 'npm test'",
     "tape": "browserify test/*.js | tap-closer | smokestack | tap-spec",
-    "lint": "eslint src/ bin/ test/",
+    "lint": "eslint src/ test/",
     "build:js": "browserify src/index.js | uglifyjs -mc > dist/bundle.js",
     "build:stylus": "stylus --include-css ./stylus/main.styl -o ./dist/main.css --compress",
     "build": "npm run clean && npm run build:js && npm run build:stylus",
@@ -22,7 +22,7 @@
   "repository": "https://github.com/MylesBorins/start-here",
   "devDependencies": {
     "eslint": "^5.0.1",
-    "smokestack": "^3.3.0",
+    "smokestack": "^3.6.0",
     "tap-closer": "^1.0.0",
     "tap-spec": "^5.0.0",
     "tape": "^4.1.0",
