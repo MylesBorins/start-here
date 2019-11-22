@@ -29,5 +29,5 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 server.listen(process.env.PORT || 3000, _ => {
   var host = server.address().address;
   var port = server.address().port;
-  console.log(`Example app listening at http://${host}:${port}`);
+  console.log(`start-here listening at http://${host}:${port}`);
 });
