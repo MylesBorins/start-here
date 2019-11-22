@@ -21,7 +21,7 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/MylesBorins/start-here",
   "devDependencies": {
-    "eslint": "^5.0.1",
+    "eslint": "^6.6.0",
     "smokestack": "^3.6.0",
     "tap-closer": "^1.0.0",
     "tap-spec": "^5.0.0",
