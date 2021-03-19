@@ -1,0 +1,28 @@
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#content {
+  display: grid;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  place-items: center;
+}
+
+#github-link {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2em;
+}
+
+#github-link a img {
+  width: 64px;
+  height: 64px;
+  transition: all .2s ease-in-out;
+}
+
+#github-link a img:hover {
+  transform: scale(1.1);
+}

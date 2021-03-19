@@ -3,37 +3,28 @@
   "version": "3.0.0",
   "description": "does alot of nothing",
   "scripts": {
-    "test": "EXIT_STATUS=0; npm -s run lint || EXIT_STATUS=$?; npm -s run tape || EXIT_STATUS=$?; exit $EXIT_STATUS",
-    "test:watch": "nodemon --ignore node_modules/ -e js,json --exec 'npm test'",
-    "tape": "browserify test/*.js | tap-closer | smokestack | tap-spec",
-    "lint": "eslint src/ test/",
-    "build:js": "browserify src/index.js | uglifyjs -mc > dist/bundle.js",
-    "build:stylus": "stylus --include-css ./stylus/main.styl -o ./dist/main.css --compress",
-    "build": "npm run clean && npm run build:js && npm run build:stylus",
-    "watch:js": "watchify src/index.js -o dist/bundle.js -dv",
-    "watch:stylus": "stylus --include-css -w ./stylus/main.styl -o ./dist/main.css",
-    "watch": "npm run clean && (npm run watch:js & npm run watch:stylus)",
-    "clean": "rm -rf dist/ && mkdir -p dist/",
-    "dev": "npm run clean && npm run watch & node server/",
-    "start": "npm run build && node server/"
+    "test": "npm run lint",
+    "lint": "eslint public/*.mjs",
+    "start": "npm run build && serve dist/",
+    "dev": "serve public/",
+    "build": "echo build:clean build:css build:js build:html build:img | xargs -n1 npm run",
+    "build:clean": "rm -rf dist/ && mkdir dist/",
+    "build:css": "postcss public/index.css -o dist/index.css",
+    "build:js": "terser public/index.mjs -o dist/index.mjs",
+    "build:html": "html-minifier -c ./.htmlminrc.json public/index.html > dist/index.html",
+    "build:img": "cp -r ./public/images/ ./dist/images/"
   },
   "author": "Myles Borins <myles.borins@gmail.com>",
   "license": "Apache-2.0",
   "repository": "https://github.com/MylesBorins/start-here",
   "devDependencies": {
-    "eslint": "^6.6.0",
-    "smokestack": "^3.6.0",
-    "tap-closer": "^1.0.0",
-    "tap-spec": "^5.0.0",
-    "tape": "^4.1.0",
-    "watchify": "^3.11.0"
+    "cssnano": "^4.1.10",
+    "eslint": "^7.5.0",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.2.8",
+    "postcss-cli": "^8.1.0",
+    "serve": "^11.0.1",
+    "terser": "^5.3.7"
   },
-  "dependencies": {
-    "browserify": "^16.2.2",
-    "compression": "^1.6.0",
-    "express": "^4.13.3",
-    "lodash": "^4.17.10",
-    "stylus": "^0.54.5",
-    "uglify-es": "^3.0.15"
-  }
+  "dependencies": {}
 }
