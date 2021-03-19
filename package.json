@@ -1,6 +1,6 @@
 {
   "name": "start-here",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "does alot of nothing",
   "scripts": {
     "test": "npm run lint",
