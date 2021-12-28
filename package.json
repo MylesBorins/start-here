@@ -18,13 +18,12 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/MylesBorins/start-here",
   "devDependencies": {
-    "cssnano": "^4.1.10",
-    "eslint": "^7.5.0",
+    "cssnano": "^5.0.14",
+    "eslint": "^8.5.0",
     "html-minifier": "^4.0.0",
     "postcss": "^8.2.10",
-    "postcss-cli": "^8.1.0",
-    "serve": "^11.0.1",
+    "postcss-cli": "^9.1.0",
+    "serve": "^13.0.2",
     "terser": "^5.3.7"
-  },
-  "dependencies": {}
+  }
 }
