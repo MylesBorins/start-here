@@ -39,7 +39,7 @@ Run eslint
 
 ## License
 
-Apache 2.0 ~ check LICENSE
+Apache 2.0
 
 ## Code of Conduct
 Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
