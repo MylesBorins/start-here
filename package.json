@@ -21,7 +21,7 @@
     "cssnano": "^5.0.14",
     "eslint": "^8.5.0",
     "html-minifier": "^4.0.0",
-    "postcss": "^8.2.10",
+    "postcss": "^8.4.31",
     "postcss-cli": "^9.1.0",
     "serve": "^13.0.2",
     "terser": "^5.14.2"
