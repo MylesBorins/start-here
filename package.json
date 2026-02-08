@@ -1,29 +1,33 @@
 {
   "name": "start-here",
   "version": "4.0.0",
-  "description": "does alot of nothing",
+  "description": "A minimal static website starter template",
+  "type": "module",
   "scripts": {
     "test": "npm run lint",
-    "lint": "eslint public/*.mjs",
+    "lint": "eslint",
     "start": "npm run build && serve dist/",
-    "dev": "serve public/",
+    "dev": "browser-sync start --server public --files 'public/*'",
     "build": "echo build:clean build:css build:js build:html build:img | xargs -n1 npm run",
     "build:clean": "rm -rf dist/ && mkdir dist/",
     "build:css": "postcss public/index.css -o dist/index.css",
-    "build:js": "terser public/index.mjs -o dist/index.mjs",
-    "build:html": "html-minifier -c ./.htmlminrc.json public/index.html > dist/index.html",
+    "build:js": "rollup -c",
+    "build:html": "html-minifier-terser -c ./.htmlminrc.json public/index.html -o dist/index.html",
     "build:img": "cp -r ./public/images/ ./dist/images/"
   },
   "author": "Myles Borins <myles.borins@gmail.com>",
   "license": "Apache-2.0",
   "repository": "https://github.com/MylesBorins/start-here",
   "devDependencies": {
-    "cssnano": "^5.0.14",
-    "eslint": "^8.5.0",
-    "html-minifier": "^4.0.0",
-    "postcss": "^8.4.31",
-    "postcss-cli": "^9.1.0",
-    "serve": "^14.2.5",
-    "terser": "^5.14.2"
+    "@rollup/plugin-terser": "^0.4.4",
+    "browser-sync": "^3.0.0",
+    "cssnano": "^7.1.2",
+    "eslint": "^10.0.0",
+    "globals": "^17.3.0",
+    "html-minifier-terser": "^7.2.0",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "rollup": "^4.40.0",
+    "serve": "^14.2.5"
   }
 }

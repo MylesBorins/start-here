@@ -1,13 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #0a0a0f;
+  color: #fff;
+  overflow: hidden;
+}
+
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 #content {
+  position: relative;
+  z-index: 1;
   display: grid;
-  margin: 0;
   width: 100vw;
   height: 100vh;
   place-items: center;
+  text-align: center;
+}
+
+#content h1 {
+  font-size: clamp(2rem, 8vw, 5rem);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5em;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#content p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  opacity: 0.6;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 #github-link {
@@ -15,14 +53,18 @@ body {
   bottom: 0;
   right: 0;
   margin: 2em;
+  z-index: 2;
 }
 
 #github-link a img {
-  width: 64px;
-  height: 64px;
-  transition: all .2s ease-in-out;
+  width: 48px;
+  height: 48px;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  filter: invert(1);
 }
 
 #github-link a img:hover {
+  opacity: 1;
   transform: scale(1.1);
 }
