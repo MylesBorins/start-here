@@ -19,7 +19,7 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/MylesBorins/start-here",
   "devDependencies": {
-    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-terser": "^1.0.0",
     "browser-sync": "^3.0.0",
     "cssnano": "^7.1.2",
     "eslint": "^10.0.0",
